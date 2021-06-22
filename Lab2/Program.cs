@@ -10,7 +10,7 @@ namespace Lab2
 		{
 			if (args.Length < 1)
 			{
-				showMessage("[info]: please specify calculation string");
+				helpUsage();
 				return;
 			}
 
@@ -41,6 +41,13 @@ namespace Lab2
 			
 			showMessage($"[result]: {result.iValue}");
 		}
+
+		static void helpUsage()
+		{
+			showMessage("[usage]:");
+			showMessage("\tLab2 <calculation string> - parsing a string and performing calculations;");
+		}
+		
 		static void showMessage(string sMessage) {Console.WriteLine("\n" + sMessage);}
 	}
 }

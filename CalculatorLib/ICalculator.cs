@@ -2,6 +2,6 @@
 {
     public interface ICalculator
     {
-        Result calculate(string inputString);
+        Result calculate(string s);
     }
 }

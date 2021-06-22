@@ -63,6 +63,9 @@ namespace SimpleCalculatorLibrary
 
 		private string _calculatePriority(string s)
 		{
+			/*
+				Opening brackets.
+			*/
 			while (true)
 			{
 				string sPriority = this._getParenthesesExpression(s);
@@ -71,6 +74,9 @@ namespace SimpleCalculatorLibrary
 				s = s.Replace("(" + sPriority + ")", this.calculate(sPriority).iValue.ToString());
 			}
 
+			/*
+				Multiplication, division and other priority operations.
+			*/
 			while (true)
 			{
 				string sPriority = this._getPriorityOperation(s);
